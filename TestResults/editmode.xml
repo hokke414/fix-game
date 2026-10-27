@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="72" result="Passed" total="72" passed="72" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:51Z" duration="19.9655093">
+  <test-suite type="TestSuite" id="1000" name="fix-game" fullname="fix-game" runstate="Runnable" testcasecount="72" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:51Z" duration="19.965509" total="72" passed="72" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1064" name="MRRobotRepair.EditModeTests.dll" fullname="C:/Users/kerom/local/Dev/mr/fix-game/Library/ScriptAssemblies/MRRobotRepair.EditModeTests.dll" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:32Z" duration="0.368234" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22680" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1065" name="MRRobotRepair" fullname="MRRobotRepair" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:32Z" duration="0.366923" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1066" name="Tests" fullname="MRRobotRepair.Tests" runstate="Runnable" testcasecount="48" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:32Z" duration="0.365995" total="48" passed="48" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1004" name="FaultStateControllerTests" fullname="MRRobotRepair.Tests.FaultStateControllerTests" classname="MRRobotRepair.Tests.FaultStateControllerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.073309" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1005" name="CorrectRepairSucceeds" fullname="MRRobotRepair.Tests.FaultStateControllerTests.CorrectRepairSucceeds" methodname="CorrectRepairSucceeds" classname="MRRobotRepair.Tests.FaultStateControllerTests" runstate="Runnable" seed="76311229" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.023812" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.FaultStateControllerTests.CorrectRepairSucceeds
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.FaultStateControllerTests.CorrectRepairSucceeds, ResultState: Passed, Duration: 0.024s
+]]></output>
+            </test-case>
+            <test-case id="1007" name="ResetClearsRepair" fullname="MRRobotRepair.Tests.FaultStateControllerTests.ResetClearsRepair" methodname="ResetClearsRepair" classname="MRRobotRepair.Tests.FaultStateControllerTests" runstate="Runnable" seed="747015388" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000950" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.FaultStateControllerTests.ResetClearsRepair
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.FaultStateControllerTests.ResetClearsRepair, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1006" name="WrongRepairFails" fullname="MRRobotRepair.Tests.FaultStateControllerTests.WrongRepairFails" methodname="WrongRepairFails" classname="MRRobotRepair.Tests.FaultStateControllerTests" runstate="Runnable" seed="760070742" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000874" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.FaultStateControllerTests.WrongRepairFails
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.FaultStateControllerTests.WrongRepairFails, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1008" name="GameStateControllerTests" fullname="MRRobotRepair.Tests.GameStateControllerTests" classname="MRRobotRepair.Tests.GameStateControllerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.026561" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1010" name="AdvanceFollowsOrder" fullname="MRRobotRepair.Tests.GameStateControllerTests.AdvanceFollowsOrder" methodname="AdvanceFollowsOrder" classname="MRRobotRepair.Tests.GameStateControllerTests" runstate="Runnable" seed="1536256980" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.010445" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.GameStateControllerTests.AdvanceFollowsOrder
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.GameStateControllerTests.AdvanceFollowsOrder, ResultState: Passed, Duration: 0.010s
+]]></output>
+            </test-case>
+            <test-case id="1011" name="RestartReturnsToSafety" fullname="MRRobotRepair.Tests.GameStateControllerTests.RestartReturnsToSafety" methodname="RestartReturnsToSafety" classname="MRRobotRepair.Tests.GameStateControllerTests" runstate="Runnable" seed="2115190746" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000841" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.GameStateControllerTests.RestartReturnsToSafety
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.GameStateControllerTests.RestartReturnsToSafety, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1009" name="StartsAtBoot" fullname="MRRobotRepair.Tests.GameStateControllerTests.StartsAtBoot" methodname="StartsAtBoot" classname="MRRobotRepair.Tests.GameStateControllerTests" runstate="Runnable" seed="297816906" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000860" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.GameStateControllerTests.StartsAtBoot
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.GameStateControllerTests.StartsAtBoot, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1012" name="GuidanceHintTimerTests" fullname="MRRobotRepair.Tests.GuidanceHintTimerTests" classname="MRRobotRepair.Tests.GuidanceHintTimerTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.008203" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1014" name="ResetAllowsSecondHint" fullname="MRRobotRepair.Tests.GuidanceHintTimerTests.ResetAllowsSecondHint" methodname="ResetAllowsSecondHint" classname="MRRobotRepair.Tests.GuidanceHintTimerTests" runstate="Runnable" seed="76359031" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000959" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.GuidanceHintTimerTests.ResetAllowsSecondHint
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.GuidanceHintTimerTests.ResetAllowsSecondHint, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1013" name="TriggersAt30Seconds" fullname="MRRobotRepair.Tests.GuidanceHintTimerTests.TriggersAt30Seconds" methodname="TriggersAt30Seconds" classname="MRRobotRepair.Tests.GuidanceHintTimerTests" runstate="Runnable" seed="418801132" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000376" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.GuidanceHintTimerTests.TriggersAt30Seconds
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.GuidanceHintTimerTests.TriggersAt30Seconds, ResultState: Passed, Duration: 0.000s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1015" name="MistakeTrackerTests" fullname="MRRobotRepair.Tests.MistakeTrackerTests" classname="MRRobotRepair.Tests.MistakeTrackerTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.016196" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1017" name="ResetClearsCount" fullname="MRRobotRepair.Tests.MistakeTrackerTests.ResetClearsCount" methodname="ResetClearsCount" classname="MRRobotRepair.Tests.MistakeTrackerTests" runstate="Runnable" seed="990329302" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.002851" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.MistakeTrackerTests.ResetClearsCount
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.MistakeTrackerTests.ResetClearsCount, ResultState: Passed, Duration: 0.003s
+]]></output>
+            </test-case>
+            <test-case id="1016" name="SuppressesRapidDuplicate" fullname="MRRobotRepair.Tests.MistakeTrackerTests.SuppressesRapidDuplicate" methodname="SuppressesRapidDuplicate" classname="MRRobotRepair.Tests.MistakeTrackerTests" runstate="Runnable" seed="785514219" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000456" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.MistakeTrackerTests.SuppressesRapidDuplicate
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.MistakeTrackerTests.SuppressesRapidDuplicate, ResultState: Passed, Duration: 0.000s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1018" name="RepairFlowControllerTests" fullname="MRRobotRepair.Tests.RepairFlowControllerTests" classname="MRRobotRepair.Tests.RepairFlowControllerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.022879" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1019" name="CompletesInOrder" fullname="MRRobotRepair.Tests.RepairFlowControllerTests.CompletesInOrder" methodname="CompletesInOrder" classname="MRRobotRepair.Tests.RepairFlowControllerTests" runstate="Runnable" seed="1456551433" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.008149" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.RepairFlowControllerTests.CompletesInOrder
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.RepairFlowControllerTests.CompletesInOrder, ResultState: Passed, Duration: 0.008s
+]]></output>
+            </test-case>
+            <test-case id="1021" name="RejectsInvalidPrerequisite" fullname="MRRobotRepair.Tests.RepairFlowControllerTests.RejectsInvalidPrerequisite" methodname="RejectsInvalidPrerequisite" classname="MRRobotRepair.Tests.RepairFlowControllerTests" runstate="Runnable" seed="327270326" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.000969" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.RepairFlowControllerTests.RejectsInvalidPrerequisite
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.RepairFlowControllerTests.RejectsInvalidPrerequisite, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1020" name="RejectsOutOfOrder" fullname="MRRobotRepair.Tests.RepairFlowControllerTests.RejectsOutOfOrder" methodname="RejectsOutOfOrder" classname="MRRobotRepair.Tests.RepairFlowControllerTests" runstate="Runnable" seed="1678838777" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:31Z" duration="0.001052" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.RepairFlowControllerTests.RejectsOutOfOrder
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.RepairFlowControllerTests.RejectsOutOfOrder, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1022" name="ResettableObjectTests" fullname="MRRobotRepair.Tests.ResettableObjectTests" classname="MRRobotRepair.Tests.ResettableObjectTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:32Z" duration="0.028922" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1025" name="RecordChangesOrigin" fullname="MRRobotRepair.Tests.ResettableObjectTests.RecordChangesOrigin" methodname="RecordChangesOrigin" classname="MRRobotRepair.Tests.ResettableObjectTests" runstate="Runnable" seed="616649813" result="Passed" start-time="2026-10-27 11:55:31Z" end-time="2026-10-27 11:55:32Z" duration="0.005562" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ResettableObjectTests.RecordChangesOrigin
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ResettableObjectTests.RecordChangesOrigin, ResultState: Passed, Duration: 0.006s
+]]></output>
+            </test-case>
+            <test-case id="1026" name="ResetFiresEvent" fullname="MRRobotRepair.Tests.ResettableObjectTests.ResetFiresEvent" methodname="ResetFiresEvent" classname="MRRobotRepair.Tests.ResettableObjectTests" runstate="Runnable" seed="1296482669" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000859" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ResettableObjectTests.ResetFiresEvent
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ResettableObjectTests.ResetFiresEvent, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1023" name="ResetRestoresPosition" fullname="MRRobotRepair.Tests.ResettableObjectTests.ResetRestoresPosition" methodname="ResetRestoresPosition" classname="MRRobotRepair.Tests.ResettableObjectTests" runstate="Runnable" seed="444743045" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001279" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ResettableObjectTests.ResetRestoresPosition
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ResettableObjectTests.ResetRestoresPosition, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1024" name="ResetRestoresRotation" fullname="MRRobotRepair.Tests.ResettableObjectTests.ResetRestoresRotation" methodname="ResetRestoresRotation" classname="MRRobotRepair.Tests.ResettableObjectTests" runstate="Runnable" seed="1503328725" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.005715" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ResettableObjectTests.ResetRestoresRotation
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ResettableObjectTests.ResetRestoresRotation, ResultState: Passed, Duration: 0.006s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1027" name="ScoreCalculatorTests" fullname="MRRobotRepair.Tests.ScoreCalculatorTests" classname="MRRobotRepair.Tests.ScoreCalculatorTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.014605" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1029" name="HalfAccuracyGets30" fullname="MRRobotRepair.Tests.ScoreCalculatorTests.HalfAccuracyGets30" methodname="HalfAccuracyGets30" classname="MRRobotRepair.Tests.ScoreCalculatorTests" runstate="Runnable" seed="266036236" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000925" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ScoreCalculatorTests.HalfAccuracyGets30
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ScoreCalculatorTests.HalfAccuracyGets30, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1031" name="MissingSafetyGetsZero" fullname="MRRobotRepair.Tests.ScoreCalculatorTests.MissingSafetyGetsZero" methodname="MissingSafetyGetsZero" classname="MRRobotRepair.Tests.ScoreCalculatorTests" runstate="Runnable" seed="1482820744" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000447" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ScoreCalculatorTests.MissingSafetyGetsZero
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ScoreCalculatorTests.MissingSafetyGetsZero, ResultState: Passed, Duration: 0.000s
+]]></output>
+            </test-case>
+            <test-case id="1030" name="OvertimeKeepsMinimum" fullname="MRRobotRepair.Tests.ScoreCalculatorTests.OvertimeKeepsMinimum" methodname="OvertimeKeepsMinimum" classname="MRRobotRepair.Tests.ScoreCalculatorTests" runstate="Runnable" seed="571661393" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000369" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ScoreCalculatorTests.OvertimeKeepsMinimum
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ScoreCalculatorTests.OvertimeKeepsMinimum, ResultState: Passed, Duration: 0.000s
+]]></output>
+            </test-case>
+            <test-case id="1028" name="PerfectIs100" fullname="MRRobotRepair.Tests.ScoreCalculatorTests.PerfectIs100" methodname="PerfectIs100" classname="MRRobotRepair.Tests.ScoreCalculatorTests" runstate="Runnable" seed="248913963" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000708" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ScoreCalculatorTests.PerfectIs100
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ScoreCalculatorTests.PerfectIs100, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1032" name="SnapZoneTests" fullname="MRRobotRepair.Tests.SnapZoneTests" classname="MRRobotRepair.Tests.SnapZoneTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.019655" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1033" name="AcceptsMatchingPart" fullname="MRRobotRepair.Tests.SnapZoneTests.AcceptsMatchingPart" methodname="AcceptsMatchingPart" classname="MRRobotRepair.Tests.SnapZoneTests" runstate="Runnable" seed="1756837770" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.002482" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.SnapZoneTests.AcceptsMatchingPart
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.SnapZoneTests.AcceptsMatchingPart, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+            <test-case id="1035" name="RejectsFarPart" fullname="MRRobotRepair.Tests.SnapZoneTests.RejectsFarPart" methodname="RejectsFarPart" classname="MRRobotRepair.Tests.SnapZoneTests" runstate="Runnable" seed="1476962075" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000769" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.SnapZoneTests.RejectsFarPart
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.SnapZoneTests.RejectsFarPart, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1034" name="RejectsWrongId" fullname="MRRobotRepair.Tests.SnapZoneTests.RejectsWrongId" methodname="RejectsWrongId" classname="MRRobotRepair.Tests.SnapZoneTests" runstate="Runnable" seed="1890135245" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000746" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.SnapZoneTests.RejectsWrongId
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.SnapZoneTests.RejectsWrongId, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1036" name="SnapMovesPart" fullname="MRRobotRepair.Tests.SnapZoneTests.SnapMovesPart" methodname="SnapMovesPart" classname="MRRobotRepair.Tests.SnapZoneTests" runstate="Runnable" seed="2042337638" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000928" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.SnapZoneTests.SnapMovesPart
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.SnapZoneTests.SnapMovesPart, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1037" name="ToolControllerTests" fullname="MRRobotRepair.Tests.ToolControllerTests" classname="MRRobotRepair.Tests.ToolControllerTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.023159" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1039" name="CorrectTargetSucceeds" fullname="MRRobotRepair.Tests.ToolControllerTests.CorrectTargetSucceeds" methodname="CorrectTargetSucceeds" classname="MRRobotRepair.Tests.ToolControllerTests" runstate="Runnable" seed="575212982" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001820" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ToolControllerTests.CorrectTargetSucceeds
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ToolControllerTests.CorrectTargetSucceeds, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+            <test-case id="1038" name="StoresId" fullname="MRRobotRepair.Tests.ToolControllerTests.StoresId" methodname="StoresId" classname="MRRobotRepair.Tests.ToolControllerTests" runstate="Runnable" seed="979870750" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001023" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ToolControllerTests.StoresId
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ToolControllerTests.StoresId, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1040" name="WrongTargetFails" fullname="MRRobotRepair.Tests.ToolControllerTests.WrongTargetFails" methodname="WrongTargetFails" classname="MRRobotRepair.Tests.ToolControllerTests" runstate="Runnable" seed="1214422278" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001048" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ToolControllerTests.WrongTargetFails
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ToolControllerTests.WrongTargetFails, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1041" name="WrongTargetFiresEvent" fullname="MRRobotRepair.Tests.ToolControllerTests.WrongTargetFiresEvent" methodname="WrongTargetFiresEvent" classname="MRRobotRepair.Tests.ToolControllerTests" runstate="Runnable" seed="1130809301" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001362" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.ToolControllerTests.WrongTargetFiresEvent
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.ToolControllerTests.WrongTargetFiresEvent, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1042" name="WorkspacePlacementControllerTests" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.073310" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1050" name="AppliesMovementHeightYaw" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.AppliesMovementHeightYaw" methodname="AppliesMovementHeightYaw" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="1364095711" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.008381" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.AppliesMovementHeightYaw
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.AppliesMovementHeightYaw, ResultState: Passed, Duration: 0.008s
+]]></output>
+            </test-case>
+            <test-case id="1053" name="BeginAdjustmentUnlocks" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.BeginAdjustmentUnlocks" methodname="BeginAdjustmentUnlocks" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="1692964000" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.002478" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.BeginAdjustmentUnlocks
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.BeginAdjustmentUnlocks, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+            <test-case id="1044" name="ConfirmSetsPlaced" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.ConfirmSetsPlaced" methodname="ConfirmSetsPlaced" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="768237569" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000884" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.ConfirmSetsPlaced
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.ConfirmSetsPlaced, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1048" name="InitializesInFront" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.InitializesInFront" methodname="InitializesInFront" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="122261608" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001577" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.InitializesInFront
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.InitializesInFront, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+            <test-case id="1043" name="InitialStateIsNotPlaced" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.InitialStateIsNotPlaced" methodname="InitialStateIsNotPlaced" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="1201265272" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000946" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.InitialStateIsNotPlaced
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.InitialStateIsNotPlaced, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1051" name="RejectsAdjustAfterConfirm" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsAdjustAfterConfirm" methodname="RejectsAdjustAfterConfirm" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="1676171544" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000765" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsAdjustAfterConfirm
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsAdjustAfterConfirm, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1052" name="RejectsOutOfReach" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsOutOfReach" methodname="RejectsOutOfReach" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="680345346" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.007723" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsOutOfReach
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsOutOfReach, ResultState: Passed, Duration: 0.008s
+]]></output>
+            </test-case>
+            <test-case id="1049" name="RejectsVerticalForward" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsVerticalForward" methodname="RejectsVerticalForward" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="1934476764" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001359" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsVerticalForward
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.RejectsVerticalForward, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1046" name="ResetClearsPlaced" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.ResetClearsPlaced" methodname="ResetClearsPlaced" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="171928764" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001151" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.ResetClearsPlaced
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.ResetClearsPlaced, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1045" name="SecondConfirmFails" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.SecondConfirmFails" methodname="SecondConfirmFails" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="391057043" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.002067" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.SecondConfirmFails
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.SecondConfirmFails, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+            <test-case id="1047" name="SetPoseUpdatesTransform" fullname="MRRobotRepair.Tests.WorkspacePlacementControllerTests.SetPoseUpdatesTransform" methodname="SetPoseUpdatesTransform" classname="MRRobotRepair.Tests.WorkspacePlacementControllerTests" runstate="Runnable" seed="899977582" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001645" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementControllerTests.SetPoseUpdatesTransform
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementControllerTests.SetPoseUpdatesTransform, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1054" name="WorkspacePlacementInputAdapterTests" fullname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" classname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.036077" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1059" name="BeginAdjustment_AfterConfirmationRestoresGuideAndHidesContent" fullname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.BeginAdjustment_AfterConfirmationRestoresGuideAndHidesContent" methodname="BeginAdjustment_AfterConfirmationRestoresGuideAndHidesContent" classname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" runstate="Runnable" seed="1371659195" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.009704" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.BeginAdjustment_AfterConfirmationRestoresGuideAndHidesContent
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.BeginAdjustment_AfterConfirmationRestoresGuideAndHidesContent, ResultState: Passed, Duration: 0.010s
+]]></output>
+            </test-case>
+            <test-case id="1055" name="InitializePlacement_ShowsGuideAndHidesPlacedContent" fullname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.InitializePlacement_ShowsGuideAndHidesPlacedContent" methodname="InitializePlacement_ShowsGuideAndHidesPlacedContent" classname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" runstate="Runnable" seed="1511180085" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.003251" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.InitializePlacement_ShowsGuideAndHidesPlacedContent
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.InitializePlacement_ShowsGuideAndHidesPlacedContent, ResultState: Passed, Duration: 0.003s
+]]></output>
+            </test-case>
+            <test-case id="1056" name="ProcessAdjustmentInput_MapsRightStickToHeightAndYaw" fullname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.ProcessAdjustmentInput_MapsRightStickToHeightAndYaw" methodname="ProcessAdjustmentInput_MapsRightStickToHeightAndYaw" classname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" runstate="Runnable" seed="87964924" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001421" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.ProcessAdjustmentInput_MapsRightStickToHeightAndYaw
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.ProcessAdjustmentInput_MapsRightStickToHeightAndYaw, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1058" name="TryConfirmPlacement_WhenControllerIsFar_KeepsGuideVisible" fullname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.TryConfirmPlacement_WhenControllerIsFar_KeepsGuideVisible" methodname="TryConfirmPlacement_WhenControllerIsFar_KeepsGuideVisible" classname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" runstate="Runnable" seed="982558589" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001283" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.TryConfirmPlacement_WhenControllerIsFar_KeepsGuideVisible
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.TryConfirmPlacement_WhenControllerIsFar_KeepsGuideVisible, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1057" name="TryConfirmPlacement_WhenControllerTouchesGuide_ShowsContent" fullname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.TryConfirmPlacement_WhenControllerTouchesGuide_ShowsContent" methodname="TryConfirmPlacement_WhenControllerTouchesGuide_ShowsContent" classname="MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests" runstate="Runnable" seed="1247247432" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000902" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.TryConfirmPlacement_WhenControllerTouchesGuide_ShowsContent
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspacePlacementInputAdapterTests.TryConfirmPlacement_WhenControllerTouchesGuide_ShowsContent, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1060" name="WorkspaceReachabilityCheckerTests" fullname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests" classname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.013392" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1063" name="DisabledBoundsIsNotReachable" fullname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.DisabledBoundsIsNotReachable" methodname="DisabledBoundsIsNotReachable" classname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests" runstate="Runnable" seed="2032711843" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001573" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.DisabledBoundsIsNotReachable
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.DisabledBoundsIsNotReachable, ResultState: Passed, Duration: 0.002s
+]]></output>
+            </test-case>
+            <test-case id="1062" name="FarIsNotReachable" fullname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.FarIsNotReachable" methodname="FarIsNotReachable" classname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests" runstate="Runnable" seed="1085013076" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.001023" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.FarIsNotReachable
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.FarIsNotReachable, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+            <test-case id="1061" name="TouchingIsReachable" fullname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.TouchingIsReachable" methodname="TouchingIsReachable" classname="MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests" runstate="Runnable" seed="1103659836" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.000885" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[[TestRunnerTools] Test Started: MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.TouchingIsReachable
+[TestRunnerTools] Test Finished: MRRobotRepair.Tests.WorkspaceReachabilityCheckerTests.TouchingIsReachable, ResultState: Passed, Duration: 0.001s
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1102" name="Unity.XR.Interaction.Toolkit.Editor.Tests.dll" fullname="C:/Users/kerom/local/Dev/mr/fix-game/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.Tests.dll" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.579065" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22680" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1103" name="UnityEditor" fullname="UnityEditor" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.577623" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1104" name="XR" fullname="UnityEditor.XR" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.576639" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1105" name="Interaction" fullname="UnityEditor.XR.Interaction" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.575975" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1106" name="Toolkit" fullname="UnityEditor.XR.Interaction.Toolkit" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.575264" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestSuite" id="1107" name="Editor" fullname="UnityEditor.XR.Interaction.Toolkit.Editor" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.574778" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="TestSuite" id="1108" name="Tests" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:51Z" duration="19.574234" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-suite type="TestFixture" id="1073" name="CreateUtilsTests" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:33Z" duration="1.186819" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-case id="1076" name="CreateRayInteractorActionBased_CreatesSuccessfully" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateRayInteractorActionBased_CreatesSuccessfully" methodname="CreateRayInteractorActionBased_CreatesSuccessfully" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="828163744" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.056635" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateRayInteractorActionBased_CreatesSuccessfully
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateRayInteractorActionBased_CreatesSuccessfully, ResultState: Passed, Duration: 0.057s
+]]></output>
+                    </test-case>
+                    <test-case id="1074" name="CreateXROriginForVR_CreatesSuccessfully" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateXROriginForVR_CreatesSuccessfully" methodname="CreateXROriginForVR_CreatesSuccessfully" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="889058641" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.349235" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateXROriginForVR_CreatesSuccessfully
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateXROriginForVR_CreatesSuccessfully, ResultState: Passed, Duration: 0.349s
+]]></output>
+                    </test-case>
+                    <test-case id="1078" name="CreateXRUICanvas_CreatesSuccessfully" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateXRUICanvas_CreatesSuccessfully" methodname="CreateXRUICanvas_CreatesSuccessfully" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="2107797696" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.024185" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateXRUICanvas_CreatesSuccessfully
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.CreateXRUICanvas_CreatesSuccessfully, ResultState: Passed, Duration: 0.024s
+]]></output>
+                    </test-case>
+                    <test-case id="1079" name="UndoCreateXRUICanvas_RestoresStandaloneInputModule" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUICanvas_RestoresStandaloneInputModule" methodname="UndoCreateXRUICanvas_RestoresStandaloneInputModule" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="1724745937" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.018615" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUICanvas_RestoresStandaloneInputModule
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUICanvas_RestoresStandaloneInputModule, ResultState: Passed, Duration: 0.019s
+]]></output>
+                    </test-case>
+                    <test-case id="1081" name="UndoCreateXRUIEventSystem_DoesNotDestroyExistingXRUIEventSystem" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUIEventSystem_DoesNotDestroyExistingXRUIEventSystem" methodname="UndoCreateXRUIEventSystem_DoesNotDestroyExistingXRUIEventSystem" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="1714004503" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.030820" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUIEventSystem_DoesNotDestroyExistingXRUIEventSystem
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUIEventSystem_DoesNotDestroyExistingXRUIEventSystem, ResultState: Passed, Duration: 0.031s
+]]></output>
+                    </test-case>
+                    <test-case id="1080" name="UndoCreateXRUIEventSystem_DoesNotDestroyReusedExistingUIEventSystem" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUIEventSystem_DoesNotDestroyReusedExistingUIEventSystem" methodname="UndoCreateXRUIEventSystem_DoesNotDestroyReusedExistingUIEventSystem" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="202968851" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.013777" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUIEventSystem_DoesNotDestroyReusedExistingUIEventSystem
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoCreateXRUIEventSystem_DoesNotDestroyReusedExistingUIEventSystem, ResultState: Passed, Duration: 0.014s
+]]></output>
+                    </test-case>
+                    <test-case id="1077" name="UndoRedoCreateRayInteractor_WorksWithNoErrors" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoRedoCreateRayInteractor_WorksWithNoErrors" methodname="UndoRedoCreateRayInteractor_WorksWithNoErrors" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="1288272800" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:32Z" duration="0.093923" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoRedoCreateRayInteractor_WorksWithNoErrors
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoRedoCreateRayInteractor_WorksWithNoErrors, ResultState: Passed, Duration: 0.094s
+]]></output>
+                    </test-case>
+                    <test-case id="1075" name="UndoRedoCreateXROrigin_WorksWithNoErrors" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoRedoCreateXROrigin_WorksWithNoErrors" methodname="UndoRedoCreateXROrigin_WorksWithNoErrors" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests" runstate="Runnable" seed="1351646329" result="Passed" start-time="2026-10-27 11:55:32Z" end-time="2026-10-27 11:55:33Z" duration="0.564037" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoRedoCreateXROrigin_WorksWithNoErrors
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.CreateUtilsTests.UndoRedoCreateXROrigin_WorksWithNoErrors, ResultState: Passed, Duration: 0.564s
+]]></output>
+                    </test-case>
+                  </test-suite>
+                  <test-suite type="TestFixture" id="1082" name="EditorDocumentationTests" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 11:55:33Z" end-time="2026-10-27 11:55:41Z" duration="8.458840" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-case id="1083" name="HelpURLVersionMatchesPackageVersion" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests.HelpURLVersionMatchesPackageVersion" methodname="HelpURLVersionMatchesPackageVersion" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests" runstate="Runnable" seed="85364265" result="Passed" start-time="2026-10-27 11:55:33Z" end-time="2026-10-27 11:55:33Z" duration="0.006121" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests.HelpURLVersionMatchesPackageVersion
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests.HelpURLVersionMatchesPackageVersion, ResultState: Passed, Duration: 0.006s
+]]></output>
+                    </test-case>
+                    <test-case id="1084" name="PackageDependencyLinksToCurrentVersionDependency" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests.PackageDependencyLinksToCurrentVersionDependency" methodname="PackageDependencyLinksToCurrentVersionDependency" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests" runstate="Runnable" seed="477160969" result="Passed" start-time="2026-10-27 11:55:33Z" end-time="2026-10-27 11:55:41Z" duration="8.398763" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests.PackageDependencyLinksToCurrentVersionDependency
+com.unity.xr.openxr@1.6 in samples-hands-interaction-demo.md:48 has a specific version but com.unity.xr.openxr is not a package dependency.
+com.unity.polyspatial.xr@1.1 in samples-vision-os.md:18 has a specific version but com.unity.polyspatial.xr is not a package dependency.
+com.unity.polyspatial.visionos@1.1 in samples-vision-os.md:19 has a specific version but com.unity.polyspatial.visionos is not a package dependency.
+com.unity.polyspatial.visionos@1.1 in samples-vision-os.md:23 has a specific version but com.unity.polyspatial.visionos is not a package dependency.
+com.unity.xr.interaction.toolkit@3.0 in samples-vision-os.md:81 has a specific version but com.unity.xr.interaction.toolkit is not a package dependency.
+com.unity.xr.interaction.toolkit@3.0 in samples-vision-os.md:95 has a specific version but com.unity.xr.interaction.toolkit is not a package dependency.
+com.unity.polyspatial.visionos@1.1 in samples-vision-os.md:97 has a specific version but com.unity.polyspatial.visionos is not a package dependency.
+com.unity.xr.interaction.toolkit@2.6 in xr-direct-interactor.md:36 has a specific version but com.unity.xr.interaction.toolkit is not a package dependency.
+com.unity.xr.interaction.toolkit@2.6 in xr-gaze-interactor.md:51 has a specific version but com.unity.xr.interaction.toolkit is not a package dependency.
+com.unity.xr.interaction.toolkit@2.6 in xr-ray-interactor.md:47 has a specific version but com.unity.xr.interaction.toolkit is not a package dependency.
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.EditorDocumentationTests.PackageDependencyLinksToCurrentVersionDependency, ResultState: Passed, Duration: 8.399s
+]]></output>
+                    </test-case>
+                  </test-suite>
+                  <test-suite type="TestFixture" id="1085" name="FileTests" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-27 11:55:41Z" end-time="2026-10-27 11:55:42Z" duration="0.269012" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-case id="1086" name="PackageCacheFilePathLengthIsBelowMaxLimit" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests.PackageCacheFilePathLengthIsBelowMaxLimit" methodname="PackageCacheFilePathLengthIsBelowMaxLimit" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests" runstate="Runnable" seed="1835091638" result="Passed" start-time="2026-10-27 11:55:41Z" end-time="2026-10-27 11:55:42Z" duration="0.156898" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests.PackageCacheFilePathLengthIsBelowMaxLimit
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests.PackageCacheFilePathLengthIsBelowMaxLimit, ResultState: Passed, Duration: 0.157s
+]]></output>
+                    </test-case>
+                    <test-case id="1087" name="SampleAssetsTemplateFilePathLengthIsBelowMaxLimit" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests.SampleAssetsTemplateFilePathLengthIsBelowMaxLimit" methodname="SampleAssetsTemplateFilePathLengthIsBelowMaxLimit" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests" runstate="Runnable" seed="1356335822" result="Passed" start-time="2026-10-27 11:55:42Z" end-time="2026-10-27 11:55:42Z" duration="0.103103" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests.SampleAssetsTemplateFilePathLengthIsBelowMaxLimit
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.FileTests.SampleAssetsTemplateFilePathLengthIsBelowMaxLimit, ResultState: Passed, Duration: 0.103s
+]]></output>
+                    </test-case>
+                  </test-suite>
+                  <test-suite type="TestFixture" id="1088" name="ImageTests" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-27 11:55:42Z" end-time="2026-10-27 11:55:51Z" duration="9.116969" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-case id="1095" name="LargeTexturesHaveMobilePlatformOverrides" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.LargeTexturesHaveMobilePlatformOverrides" methodname="LargeTexturesHaveMobilePlatformOverrides" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="1885069026" result="Passed" start-time="2026-10-27 11:55:42Z" end-time="2026-10-27 11:55:48Z" duration="6.526985" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.LargeTexturesHaveMobilePlatformOverrides
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.LargeTexturesHaveMobilePlatformOverrides, ResultState: Passed, Duration: 6.527s
+]]></output>
+                    </test-case>
+                    <test-case id="1092" name="NormalMapsUseCorrectFormat" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.NormalMapsUseCorrectFormat" methodname="NormalMapsUseCorrectFormat" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="148097559" result="Passed" start-time="2026-10-27 11:55:48Z" end-time="2026-10-27 11:55:49Z" duration="0.400854" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.NormalMapsUseCorrectFormat
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.NormalMapsUseCorrectFormat, ResultState: Passed, Duration: 0.401s
+]]></output>
+                    </test-case>
+                    <test-case id="1089" name="TextureDimensionsArePowerOfTwo" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TextureDimensionsArePowerOfTwo" methodname="TextureDimensionsArePowerOfTwo" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="559517235" result="Passed" start-time="2026-10-27 11:55:49Z" end-time="2026-10-27 11:55:49Z" duration="0.338424" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TextureDimensionsArePowerOfTwo
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+Non-square texture detected: Samples~/XR Device Simulator/UI/Controller/ControllerLeft.png (Samples~ source) is 512x1024
+Non-square texture detected: Samples~/XR Device Simulator/UI/Controller/ControllerOverlayLinesLeft.png (Samples~ source) is 512x1024
+Non-square texture detected: Samples~/XR Device Simulator/UI/Controller/ControllerOverlayLinesRight.png (Samples~ source) is 512x1024
+Non-square texture detected: Samples~/XR Device Simulator/UI/Controller/ControllerRight.png (Samples~ source) is 512x1024
+Non-square texture detected: Samples~/XR Device Simulator/UI/General/btn_bgbottom.png (Samples~ source) is 512x128
+Non-square texture detected: Samples~/XR Interaction Simulator/UI/General/SwitchIcon.png (Samples~ source) is 64x32
+Skipping power-of-two check for Samples~/AR Starter Assets/DemoAssets/Textures/ConcreteNormal.tif (Samples~ source): TIF format dimensions could not be read and were not considered for the test.
+Skipping power-of-two check for Samples~/Starter Assets/DemoAssets/Textures/Concrete_Albedo.tif (Samples~ source): TIF format dimensions could not be read and were not considered for the test.
+Skipping power-of-two check for Samples~/Starter Assets/DemoAssets/Textures/Concrete_Metallic.tif (Samples~ source): TIF format dimensions could not be read and were not considered for the test.
+Skipping power-of-two check for Samples~/Starter Assets/DemoAssets/Textures/Concrete_Normal.tif (Samples~ source): TIF format dimensions could not be read and were not considered for the test.
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TextureDimensionsArePowerOfTwo, ResultState: Passed, Duration: 0.338s
+]]></output>
+                    </test-case>
+                    <test-case id="1091" name="TexturesDoNotExceedMaxFileSize" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesDoNotExceedMaxFileSize" methodname="TexturesDoNotExceedMaxFileSize" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="1575372625" result="Passed" start-time="2026-10-27 11:55:49Z" end-time="2026-10-27 11:55:49Z" duration="0.402026" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesDoNotExceedMaxFileSize
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesDoNotExceedMaxFileSize, ResultState: Passed, Duration: 0.402s
+]]></output>
+                    </test-case>
+                    <test-case id="1090" name="TexturesDoNotExceedMaxResolution" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesDoNotExceedMaxResolution" methodname="TexturesDoNotExceedMaxResolution" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="1383320465" result="Passed" start-time="2026-10-27 11:55:49Z" end-time="2026-10-27 11:55:50Z" duration="0.388769" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesDoNotExceedMaxResolution
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesDoNotExceedMaxResolution, ResultState: Passed, Duration: 0.389s
+]]></output>
+                    </test-case>
+                    <test-case id="1094" name="TexturesUseRecommendedImportSettings" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesUseRecommendedImportSettings" methodname="TexturesUseRecommendedImportSettings" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="1042748626" result="Passed" start-time="2026-10-27 11:55:50Z" end-time="2026-10-27 11:55:50Z" duration="0.475517" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesUseRecommendedImportSettings
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesUseRecommendedImportSettings, ResultState: Passed, Duration: 0.476s
+]]></output>
+                    </test-case>
+                    <test-case id="1093" name="TexturesWithAlphaUseCorrectFormat" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesWithAlphaUseCorrectFormat" methodname="TexturesWithAlphaUseCorrectFormat" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests" runstate="Runnable" seed="615020434" result="Passed" start-time="2026-10-27 11:55:50Z" end-time="2026-10-27 11:55:51Z" duration="0.533072" asserts="0">
+                      <properties>
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesWithAlphaUseCorrectFormat
+Found 139 texture files in C:\Users\kerom\local\Dev\mr\fix-game\Packages\com.unity.xr.interaction.toolkit\Samples~
+Found 151 total textures (12 imported, 139 in Samples~ source)
+Skipping alpha channel check for Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Textures/Concrete_Albedo.tif: .tif is excluded
+Skipping alpha channel check for Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Textures/Concrete_Metallic.tif: .tif is excluded
+Skipping alpha channel check for Assets/Samples/XR Interaction Toolkit/3.6.0/Starter Assets/DemoAssets/Textures/Concrete_Normal.tif: .tif is excluded
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.ImageTests.TexturesWithAlphaUseCorrectFormat, ResultState: Passed, Duration: 0.533s
+]]></output>
+                    </test-case>
+                  </test-suite>
+                  <test-suite type="TestFixture" id="1096" name="PackageScriptsTests" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-27 11:55:51Z" end-time="2026-10-27 11:55:51Z" duration="0.540443" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-case id="1101" name="EditorSerializedPropertyAndContentFieldsShouldBeProtected" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.EditorSerializedPropertyAndContentFieldsShouldBeProtected" methodname="EditorSerializedPropertyAndContentFieldsShouldBeProtected" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" runstate="Runnable" seed="33235754" result="Passed" start-time="2026-10-27 11:55:51Z" end-time="2026-10-27 11:55:51Z" duration="0.118357" asserts="0">
+                      <properties>
+                        <property name="_JOINTYPE" value="UnityCombinatorial" />
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.EditorSerializedPropertyAndContentFieldsShouldBeProtected
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.EditorSerializedPropertyAndContentFieldsShouldBeProtected, ResultState: Passed, Duration: 0.118s
+]]></output>
+                    </test-case>
+                    <test-case id="1099" name="LimitInternalMethods" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitInternalMethods" methodname="LimitInternalMethods" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" runstate="Runnable" seed="1099105978" result="Passed" start-time="2026-10-27 11:55:51Z" end-time="2026-10-27 11:55:51Z" duration="0.043848" asserts="0">
+                      <properties>
+                        <property name="_JOINTYPE" value="UnityCombinatorial" />
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitInternalMethods
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitInternalMethods, ResultState: Passed, Duration: 0.044s
+]]></output>
+                    </test-case>
+                    <test-case id="1098" name="LimitInternalProperties" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitInternalProperties" methodname="LimitInternalProperties" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" runstate="Runnable" seed="1829370575" result="Passed" start-time="2026-10-27 11:55:51Z" end-time="2026-10-27 11:55:51Z" duration="0.012763" asserts="0">
+                      <properties>
+                        <property name="_JOINTYPE" value="UnityCombinatorial" />
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitInternalProperties
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitInternalProperties, ResultState: Passed, Duration: 0.013s
+]]></output>
+                    </test-case>
+                    <test-case id="1100" name="LimitPrivateProperties" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitPrivateProperties" methodname="LimitPrivateProperties" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" runstate="Runnable" seed="2001356613" result="Passed" start-time="2026-10-27 11:55:51Z" end-time="2026-10-27 11:55:51Z" duration="0.009078" asserts="0">
+                      <properties>
+                        <property name="_JOINTYPE" value="UnityCombinatorial" />
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitPrivateProperties
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.LimitPrivateProperties, ResultState: Passed, Duration: 0.009s
+]]></output>
+                    </test-case>
+                    <test-case id="1097" name="NamespaceMatchesAssembly" fullname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.NamespaceMatchesAssembly" methodname="NamespaceMatchesAssembly" classname="UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests" runstate="Runnable" seed="2068027162" result="Passed" start-time="2026-10-27 11:55:51Z" end-time="2026-10-27 11:55:51Z" duration="0.008599" asserts="0">
+                      <properties>
+                        <property name="_JOINTYPE" value="UnityCombinatorial" />
+                        <property name="retryIteration" value="0" />
+                        <property name="repeatIteration" value="0" />
+                      </properties>
+                      <output><![CDATA[[TestRunnerTools] Test Started: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.NamespaceMatchesAssembly
+[TestRunnerTools] Test Finished: UnityEditor.XR.Interaction.Toolkit.Editor.Tests.PackageScriptsTests.NamespaceMatchesAssembly, ResultState: Passed, Duration: 0.009s
+Saving results to: C:/Users/kerom/AppData/LocalLow/DefaultCompany/fix-game\TestResults.xml
+]]></output>
+                    </test-case>
+                  </test-suite>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

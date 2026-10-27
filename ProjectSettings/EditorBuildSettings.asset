@@ -6,8 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Project/Scenes/RepairGame.unity
+    guid: cc46f8a0b0d8a934099c543b60e7b734
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: fdf91fcb74bfdf94f8c0adcba8a8ebcc, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9438b4bb641c5d248bc9627a15f56fe8, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1f1364d8f0351fc4d9d6aae39f38bea1, type: 2}
   m_UseUCBPForAssetBundles: 0
