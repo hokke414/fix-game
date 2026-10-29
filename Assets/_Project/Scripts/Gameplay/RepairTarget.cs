@@ -13,10 +13,10 @@ namespace MRRobotRepair.Gameplay
         [SerializeField] private int stepIndex;
         [SerializeField] private string requiredToolId;
         [SerializeField] private Renderer feedbackRenderer;
-        [SerializeField] private Color idleColor = new(1f, 0.65f, 0.1f, 1f);
         [SerializeField] private Color completedColor = new(0.1f, 0.85f, 0.45f, 1f);
 
         private MaterialPropertyBlock propertyBlock;
+        private Color initialColor = Color.white;
         private float nextAttemptTime;
         private Collider triggerCollider;
 
@@ -40,7 +40,9 @@ namespace MRRobotRepair.Gameplay
         {
             triggerCollider = GetComponent<Collider>();
             triggerCollider.isTrigger = true;
-            SetColor(idleColor);
+            if (feedbackRenderer != null && feedbackRenderer.sharedMaterial != null)
+                initialColor = feedbackRenderer.sharedMaterial.color;
+            SetColor(initialColor);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -68,7 +70,7 @@ namespace MRRobotRepair.Gameplay
             if (triggerCollider == null) triggerCollider = GetComponent<Collider>();
             triggerCollider.enabled = true;
             triggerCollider.isTrigger = true;
-            SetColor(idleColor);
+            SetColor(initialColor);
         }
 
         private void SetColor(Color color)

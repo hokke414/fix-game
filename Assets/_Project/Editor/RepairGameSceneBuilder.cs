@@ -99,9 +99,10 @@ namespace MRRobotRepair.Editor
             Material red = GetOrCreateOpaqueMaterial("ToolRed", new Color(0.9f, 0.12f, 0.1f));
             Material yellow = GetOrCreateOpaqueMaterial("ToolYellow", new Color(1f, 0.82f, 0.08f));
             Material orange = GetOrCreateOpaqueMaterial("ToolOrange", new Color(1f, 0.4f, 0.05f));
-            Material cyan = GetOrCreateOpaqueMaterial("ToolCyan", new Color(0.1f, 0.8f, 0.85f));
+            Material purple = GetOrCreateOpaqueMaterial("ToolCyan", new Color(0.45f, 0.16f, 0.85f));
             Material green = GetOrCreateOpaqueMaterial("ToolGreen", new Color(0.15f, 0.75f, 0.3f));
-            Material white = GetOrCreateOpaqueMaterial("ToolWhite", new Color(0.9f, 0.92f, 0.94f));
+            Material pink = GetOrCreateOpaqueMaterial("ToolWhite", new Color(1f, 0.18f, 0.55f));
+            Material white = GetOrCreateOpaqueMaterial("IconWhite", new Color(0.95f, 0.95f, 0.95f));
             Material metal = GetOrCreateOpaqueMaterial("ToolMetal", new Color(0.55f, 0.62f, 0.68f));
 
             CreateVisual(workspace.transform, "Instruction Board", PrimitiveType.Cube,
@@ -135,9 +136,9 @@ namespace MRRobotRepair.Editor
             AddToolPart(powerSwitch.transform, "Power Icon Line", PrimitiveType.Cube,
                 new Vector3(0f, -0.027f, 0.021f), new Vector3(0.007f, 0.004f, 0.028f), Vector3.zero, white);
             RepairTarget wireDiagnostic = CreateTarget(content.transform, repairGame, 1, "tool-wire-tester", "Wire Diagnostic",
-                PrimitiveType.Sphere, new Vector3(-0.12f, 0.14f, -0.078f), new Vector3(0.045f, 0.045f, 0.025f), Vector3.zero, cyan);
+                PrimitiveType.Sphere, new Vector3(-0.12f, 0.14f, -0.078f), new Vector3(0.045f, 0.045f, 0.025f), Vector3.zero, purple);
             RepairTarget wireReplacement = CreateTarget(content.transform, repairGame, 2, "part-cable", "Cable Socket",
-                PrimitiveType.Cube, new Vector3(-0.12f, 0.08f, -0.078f), new Vector3(0.09f, 0.032f, 0.025f), Vector3.zero, cyan);
+                PrimitiveType.Cube, new Vector3(-0.12f, 0.08f, -0.078f), new Vector3(0.09f, 0.032f, 0.025f), Vector3.zero, purple);
             AddToolPart(wireReplacement.transform, "Cable Socket Left Pin", PrimitiveType.Cube,
                 new Vector3(-0.027f, 0f, -0.016f), new Vector3(0.012f, 0.014f, 0.008f), Vector3.zero, dark);
             AddToolPart(wireReplacement.transform, "Cable Socket Right Pin", PrimitiveType.Cube,
@@ -147,7 +148,7 @@ namespace MRRobotRepair.Editor
             AddToolPart(fuseDiagnostic.transform, "Fuse Test Center", PrimitiveType.Cylinder,
                 new Vector3(0f, -0.019f, 0f), new Vector3(0.018f, 0.003f, 0.018f), Vector3.zero, white);
             RepairTarget fuseReplacement = CreateTarget(content.transform, repairGame, 4, "part-fuse", "Fuse Slot",
-                PrimitiveType.Cylinder, new Vector3(0f, 0.08f, -0.078f), new Vector3(0.02f, 0.05f, 0.02f), new Vector3(0f, 0f, 90f), white);
+                PrimitiveType.Cylinder, new Vector3(0f, 0.08f, -0.078f), new Vector3(0.02f, 0.05f, 0.02f), new Vector3(0f, 0f, 90f), pink);
             AddToolPart(fuseReplacement.transform, "Fuse Slot Left Cap", PrimitiveType.Cylinder,
                 new Vector3(0f, -0.04f, 0f), new Vector3(0.025f, 0.012f, 0.025f), Vector3.zero, metal);
             AddToolPart(fuseReplacement.transform, "Fuse Slot Right Cap", PrimitiveType.Cylinder,
@@ -177,9 +178,9 @@ namespace MRRobotRepair.Editor
             AddToolPart(wireTester.transform, "Right Probe", PrimitiveType.Cylinder,
                 new Vector3(0.022f, 0.065f, 0f), new Vector3(0.006f, 0.035f, 0.006f), new Vector3(0f, 0f, 12f), metal);
 
-            RepairTool cable = CreateTool(content.transform, "part-cable", "Cyan Replacement Cable",
+            RepairTool cable = CreateTool(content.transform, "part-cable", "Purple Replacement Cable",
                 PrimitiveType.Cylinder, new Vector3(-0.19f, 0.04f, -0.18f), new Vector3(0.018f, 0.065f, 0.018f),
-                new Vector3(0f, 0f, 90f), new Vector3(0.18f, 0.055f, 0.055f), cyan);
+                new Vector3(0f, 0f, 90f), new Vector3(0.18f, 0.055f, 0.055f), purple);
             AddToolPart(cable.transform, "Left Connector", PrimitiveType.Cube,
                 new Vector3(-0.075f, 0f, 0f), new Vector3(0.032f, 0.04f, 0.04f), Vector3.zero, metal);
             AddToolPart(cable.transform, "Right Connector", PrimitiveType.Cube,
@@ -195,9 +196,9 @@ namespace MRRobotRepair.Editor
             AddToolPart(fuseTester.transform, "Fork Right", PrimitiveType.Cylinder,
                 new Vector3(0.018f, 0.065f, 0f), new Vector3(0.005f, 0.03f, 0.005f), Vector3.zero, metal);
 
-            RepairTool fuse = CreateTool(content.transform, "part-fuse", "White Replacement Fuse",
+            RepairTool fuse = CreateTool(content.transform, "part-fuse", "Pink Replacement Part",
                 PrimitiveType.Cylinder, new Vector3(0.07f, 0.035f, -0.18f), new Vector3(0.016f, 0.05f, 0.016f),
-                new Vector3(0f, 0f, 90f), new Vector3(0.13f, 0.045f, 0.045f), white);
+                new Vector3(0f, 0f, 90f), new Vector3(0.13f, 0.045f, 0.045f), pink);
             AddToolPart(fuse.transform, "Left Metal Cap", PrimitiveType.Cylinder,
                 new Vector3(-0.058f, 0f, 0f), new Vector3(0.02f, 0.014f, 0.02f), new Vector3(0f, 0f, 90f), metal);
             AddToolPart(fuse.transform, "Right Metal Cap", PrimitiveType.Cylinder,
@@ -225,25 +226,25 @@ namespace MRRobotRepair.Editor
 
             string[] instructions =
             {
-                "赤い丸型の電源ボタンを掴んでOFFにする",
-                "黄色の導通チェッカーを左上の水色丸端子へ当てる",
-                "水色の交換ケーブルを左下の横長ソケットへ当てる",
-                "橙のヒューズテスターを中央上の丸端子へ当てる",
-                "白い交換ヒューズを中央下の横長スロットへ当てる",
-                "赤いドライバーを右上の銀色ネジへ当てる",
-                "緑の交換基板を右下の基板スロットへ当てる",
-                "右上の緑レバーを掴んで最終テストする",
+                "赤い丸ボタンをつかんで、電源を切ろう",
+                "黄色のチェッカーを、左上の紫の丸に当てよう",
+                "紫のコードを、左下の横長の穴に当てよう",
+                "オレンジのチェッカーを、真ん中上の丸に当てよう",
+                "ピンクの短い棒を、真ん中下の横長の場所に当てよう",
+                "赤いドライバーを、右上の銀色のねじに当てよう",
+                "緑の板を、右下の四角い場所に当てよう",
+                "右上の緑のレバーをつかんで、動きを確かめよう",
             };
             string[] hints =
             {
-                "電源記号の付いた赤い丸ボタンです",
-                "表示窓と2本のプローブがある黄色い工具です",
-                "両端にコネクターがある水色のケーブルです",
-                "白い窓と2本の端子がある橙色の工具です",
-                "両端が銀色の白い円筒部品です",
-                "赤い柄と銀色の軸がある工具です",
-                "黒いチップが載った緑の板です",
-                "銀色の持ち手が付いた緑レバーです",
+                "白い電源マークが付いた赤い丸ボタンです",
+                "黒い画面と2本の細い棒がある黄色の道具です",
+                "両はしが銀色になっている紫のコードです",
+                "白い窓と2本の細い棒があるオレンジの道具です",
+                "両はしが銀色になっているピンクの短い棒です",
+                "赤い持ち手と銀色の棒がある道具です",
+                "黒い四角がのっている緑の板です",
+                "銀色の持ち手が付いた緑のレバーです",
             };
             repairGame.Configure(
                 placement,

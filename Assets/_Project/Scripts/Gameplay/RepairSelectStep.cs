@@ -21,6 +21,11 @@ namespace MRRobotRepair.Gameplay
 
         public int StepIndex => stepIndex;
 
+        private void Awake()
+        {
+            CaptureInitialColor();
+        }
+
         /// <summary>工程とXRI操作対象を設定する。</summary>
         public void Configure(
             RepairGameMvpController gameController,
@@ -32,8 +37,7 @@ namespace MRRobotRepair.Gameplay
             stepIndex = index;
             interactable = repairInteractable;
             feedbackRenderer = renderer;
-            if (feedbackRenderer != null && feedbackRenderer.sharedMaterial != null)
-                initialColor = feedbackRenderer.sharedMaterial.color;
+            CaptureInitialColor();
         }
 
         private void OnEnable()
@@ -48,6 +52,12 @@ namespace MRRobotRepair.Gameplay
 
         /// <summary>選択工程を未完了表示へ戻す。</summary>
         public void ResetStep() => SetColor(initialColor);
+
+        private void CaptureInitialColor()
+        {
+            if (feedbackRenderer != null && feedbackRenderer.sharedMaterial != null)
+                initialColor = feedbackRenderer.sharedMaterial.color;
+        }
 
         private void OnSelected(SelectEnterEventArgs args)
         {
