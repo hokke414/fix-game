@@ -96,7 +96,6 @@ namespace MRRobotRepair.Editor
 
             Material dark = GetOrCreateOpaqueMaterial("MvpDark", new Color(0.04f, 0.10f, 0.16f));
             Material body = GetOrCreateOpaqueMaterial("RobotBody", new Color(0.72f, 0.78f, 0.82f));
-            Material targetMaterial = GetOrCreateOpaqueMaterial("RepairTarget", new Color(1f, 0.65f, 0.1f));
             Material red = GetOrCreateOpaqueMaterial("ToolRed", new Color(0.9f, 0.12f, 0.1f));
             Material yellow = GetOrCreateOpaqueMaterial("ToolYellow", new Color(1f, 0.82f, 0.08f));
             Material orange = GetOrCreateOpaqueMaterial("ToolOrange", new Color(1f, 0.4f, 0.05f));
@@ -118,6 +117,8 @@ namespace MRRobotRepair.Editor
                 new Vector3(0f, 0.14f, 0.06f), new Vector3(0.36f, 0.25f, 0.22f), Vector3.zero, body, false);
             CreateVisual(content.transform, "Robot Head", PrimitiveType.Cube,
                 new Vector3(0f, 0.31f, 0.06f), new Vector3(0.18f, 0.11f, 0.13f), Vector3.zero, body, false);
+            CreateVisual(content.transform, "Dark Front Control Panel", PrimitiveType.Cube,
+                new Vector3(0f, 0.145f, -0.061f), new Vector3(0.34f, 0.2f, 0.015f), Vector3.zero, dark, false);
             CreateVisual(content.transform, "Left Eye", PrimitiveType.Sphere,
                 new Vector3(-0.045f, 0.32f, -0.01f), Vector3.one * 0.025f, Vector3.zero, dark, false);
             CreateVisual(content.transform, "Right Eye", PrimitiveType.Sphere,
@@ -125,21 +126,46 @@ namespace MRRobotRepair.Editor
 
             RepairGameMvpController repairGame = workspace.AddComponent<RepairGameMvpController>();
             RepairSelectStep powerSwitch = CreateSelectStep(content.transform, repairGame, 0, "Power Switch",
-                new Vector3(-0.14f, 0.21f, -0.065f), new Vector3(0.055f, 0.04f, 0.025f), red);
+                PrimitiveType.Cylinder, new Vector3(-0.14f, 0.21f, -0.078f), new Vector3(0.045f, 0.018f, 0.045f),
+                new Vector3(90f, 0f, 0f), red);
+            AddToolPart(powerSwitch.transform, "Power Icon White Disc", PrimitiveType.Cylinder,
+                new Vector3(0f, -0.019f, 0f), new Vector3(0.028f, 0.003f, 0.028f), Vector3.zero, white);
+            AddToolPart(powerSwitch.transform, "Power Icon Red Center", PrimitiveType.Cylinder,
+                new Vector3(0f, -0.023f, 0f), new Vector3(0.02f, 0.003f, 0.02f), Vector3.zero, red);
+            AddToolPart(powerSwitch.transform, "Power Icon Line", PrimitiveType.Cube,
+                new Vector3(0f, -0.027f, 0.021f), new Vector3(0.007f, 0.004f, 0.028f), Vector3.zero, white);
             RepairTarget wireDiagnostic = CreateTarget(content.transform, repairGame, 1, "tool-wire-tester", "Wire Diagnostic",
-                new Vector3(-0.12f, 0.14f, -0.065f), targetMaterial);
+                PrimitiveType.Sphere, new Vector3(-0.12f, 0.14f, -0.078f), new Vector3(0.045f, 0.045f, 0.025f), Vector3.zero, cyan);
             RepairTarget wireReplacement = CreateTarget(content.transform, repairGame, 2, "part-cable", "Cable Socket",
-                new Vector3(-0.12f, 0.08f, -0.065f), targetMaterial);
+                PrimitiveType.Cube, new Vector3(-0.12f, 0.08f, -0.078f), new Vector3(0.09f, 0.032f, 0.025f), Vector3.zero, cyan);
+            AddToolPart(wireReplacement.transform, "Cable Socket Left Pin", PrimitiveType.Cube,
+                new Vector3(-0.027f, 0f, -0.016f), new Vector3(0.012f, 0.014f, 0.008f), Vector3.zero, dark);
+            AddToolPart(wireReplacement.transform, "Cable Socket Right Pin", PrimitiveType.Cube,
+                new Vector3(0.027f, 0f, -0.016f), new Vector3(0.012f, 0.014f, 0.008f), Vector3.zero, dark);
             RepairTarget fuseDiagnostic = CreateTarget(content.transform, repairGame, 3, "tool-fuse-tester", "Fuse Diagnostic",
-                new Vector3(0f, 0.14f, -0.065f), targetMaterial);
+                PrimitiveType.Cylinder, new Vector3(0f, 0.14f, -0.078f), new Vector3(0.04f, 0.018f, 0.04f), new Vector3(90f, 0f, 0f), orange);
+            AddToolPart(fuseDiagnostic.transform, "Fuse Test Center", PrimitiveType.Cylinder,
+                new Vector3(0f, -0.019f, 0f), new Vector3(0.018f, 0.003f, 0.018f), Vector3.zero, white);
             RepairTarget fuseReplacement = CreateTarget(content.transform, repairGame, 4, "part-fuse", "Fuse Slot",
-                new Vector3(0f, 0.08f, -0.065f), targetMaterial);
+                PrimitiveType.Cylinder, new Vector3(0f, 0.08f, -0.078f), new Vector3(0.02f, 0.05f, 0.02f), new Vector3(0f, 0f, 90f), white);
+            AddToolPart(fuseReplacement.transform, "Fuse Slot Left Cap", PrimitiveType.Cylinder,
+                new Vector3(0f, -0.04f, 0f), new Vector3(0.025f, 0.012f, 0.025f), Vector3.zero, metal);
+            AddToolPart(fuseReplacement.transform, "Fuse Slot Right Cap", PrimitiveType.Cylinder,
+                new Vector3(0f, 0.04f, 0f), new Vector3(0.025f, 0.012f, 0.025f), Vector3.zero, metal);
             RepairTarget boardOpen = CreateTarget(content.transform, repairGame, 5, "tool-screwdriver", "Board Screws",
-                new Vector3(0.12f, 0.14f, -0.065f), targetMaterial);
+                PrimitiveType.Cylinder, new Vector3(0.12f, 0.14f, -0.078f), new Vector3(0.038f, 0.014f, 0.038f), new Vector3(90f, 0f, 0f), metal);
+            AddToolPart(boardOpen.transform, "Screw Slot Horizontal", PrimitiveType.Cube,
+                new Vector3(0f, -0.016f, 0f), new Vector3(0.045f, 0.005f, 0.008f), Vector3.zero, dark);
+            AddToolPart(boardOpen.transform, "Screw Slot Vertical", PrimitiveType.Cube,
+                new Vector3(0f, -0.017f, 0f), new Vector3(0.008f, 0.005f, 0.045f), Vector3.zero, dark);
             RepairTarget boardReplacement = CreateTarget(content.transform, repairGame, 6, "part-board", "Board Slot",
-                new Vector3(0.12f, 0.08f, -0.065f), targetMaterial);
+                PrimitiveType.Cube, new Vector3(0.12f, 0.08f, -0.078f), new Vector3(0.1f, 0.055f, 0.025f), Vector3.zero, green);
+            AddToolPart(boardReplacement.transform, "Board Slot Chip", PrimitiveType.Cube,
+                new Vector3(0f, 0f, -0.017f), new Vector3(0.035f, 0.026f, 0.008f), Vector3.zero, dark);
             RepairSelectStep finalTest = CreateSelectStep(content.transform, repairGame, 7, "Final Test Switch",
-                new Vector3(0.14f, 0.21f, -0.065f), new Vector3(0.055f, 0.04f, 0.025f), green);
+                PrimitiveType.Cube, new Vector3(0.14f, 0.21f, -0.078f), new Vector3(0.075f, 0.04f, 0.025f), Vector3.zero, green);
+            AddToolPart(finalTest.transform, "Final Test Lever", PrimitiveType.Cube,
+                new Vector3(0f, 0.025f, -0.02f), new Vector3(0.02f, 0.055f, 0.02f), new Vector3(0f, 0f, -20f), metal);
 
             RepairTool wireTester = CreateTool(content.transform, "tool-wire-tester", "Yellow Continuity Tester",
                 PrimitiveType.Cube, new Vector3(-0.31f, 0.055f, -0.18f), new Vector3(0.065f, 0.08f, 0.045f),
@@ -199,25 +225,25 @@ namespace MRRobotRepair.Editor
 
             string[] instructions =
             {
-                "赤い電源スイッチを掴んで電源をOFFにする",
-                "黄色の導通チェッカーを左上の橙ポイントへ当てる",
-                "水色の交換ケーブルを左下の橙ポイントへ当てる",
-                "橙のヒューズテスターを中央上の橙ポイントへ当てる",
-                "白い交換ヒューズを中央下の橙ポイントへ当てる",
-                "赤いドライバーを右上の橙ポイントへ当てる",
-                "緑の交換基板を右下の橙ポイントへ当てる",
-                "緑の最終テストスイッチを掴む",
+                "赤い丸型の電源ボタンを掴んでOFFにする",
+                "黄色の導通チェッカーを左上の水色丸端子へ当てる",
+                "水色の交換ケーブルを左下の横長ソケットへ当てる",
+                "橙のヒューズテスターを中央上の丸端子へ当てる",
+                "白い交換ヒューズを中央下の横長スロットへ当てる",
+                "赤いドライバーを右上の銀色ネジへ当てる",
+                "緑の交換基板を右下の基板スロットへ当てる",
+                "右上の緑レバーを掴んで最終テストする",
             };
             string[] hints =
             {
-                "ロボット前面左上の赤い四角です",
-                "手前左端の黄色い箱を掴みます",
-                "手前の水色の棒を掴みます",
-                "手前中央の橙色の箱を掴みます",
-                "手前の白い小さな棒を掴みます",
-                "手前右側の赤い棒を掴みます",
-                "手前右端の緑の板を掴みます",
-                "ロボット前面右上の緑の四角です",
+                "電源記号の付いた赤い丸ボタンです",
+                "表示窓と2本のプローブがある黄色い工具です",
+                "両端にコネクターがある水色のケーブルです",
+                "白い窓と2本の端子がある橙色の工具です",
+                "両端が銀色の白い円筒部品です",
+                "赤い柄と銀色の軸がある工具です",
+                "黒いチップが載った緑の板です",
+                "銀色の持ち手が付いた緑レバーです",
             };
             repairGame.Configure(
                 placement,
@@ -424,11 +450,13 @@ namespace MRRobotRepair.Editor
             int stepIndex,
             string toolId,
             string name,
+            PrimitiveType primitive,
             Vector3 position,
+            Vector3 scale,
+            Vector3 eulerAngles,
             Material material)
         {
-            GameObject target = CreateVisual(parent, name, PrimitiveType.Cube, position,
-                new Vector3(0.055f, 0.035f, 0.025f), Vector3.zero, material, true);
+            GameObject target = CreateVisual(parent, name, primitive, position, scale, eulerAngles, material, true);
             target.GetComponent<Collider>().isTrigger = true;
             RepairTarget repairTarget = target.AddComponent<RepairTarget>();
             repairTarget.Configure(controller, stepIndex, toolId, target.GetComponent<Renderer>());
@@ -440,12 +468,14 @@ namespace MRRobotRepair.Editor
             RepairGameMvpController controller,
             int stepIndex,
             string name,
+            PrimitiveType primitive,
             Vector3 position,
             Vector3 scale,
+            Vector3 eulerAngles,
             Material material)
         {
-            GameObject selectable = CreateVisual(parent, name, PrimitiveType.Cube, position, scale,
-                Vector3.zero, material, true);
+            GameObject selectable = CreateVisual(parent, name, primitive, position, scale,
+                eulerAngles, material, true);
             XRSimpleInteractable interactable = selectable.AddComponent<XRSimpleInteractable>();
             RepairSelectStep step = selectable.AddComponent<RepairSelectStep>();
             step.Configure(controller, stepIndex, interactable, selectable.GetComponent<Renderer>());

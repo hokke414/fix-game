@@ -52,7 +52,7 @@ namespace MRRobotRepair.Gameplay
             nextAttemptTime = Time.unscaledTime + 0.5f;
             if (tool.ToolId != requiredToolId)
             {
-                controller.RecordMistake("違う工具です");
+                controller.ShowTemporaryMessage("違う工具です");
                 return;
             }
 

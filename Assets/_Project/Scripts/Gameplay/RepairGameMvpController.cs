@@ -1,6 +1,5 @@
 using System;
 using MRRobotRepair.Core;
-using MRRobotRepair.Scoring;
 using MRRobotRepair.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,15 +20,19 @@ namespace MRRobotRepair.Gameplay
         private readonly GuidanceHintTimer hintTimer = new(30f);
         private InputAction restartAction;
         private float startTime;
-        private float statusClearTime;
+        private float messageClearTime;
         private bool gameStarted;
+        private int lastDisplayedSecond = -1;
         private string currentInstruction = string.Empty;
         private string currentStatus = string.Empty;
+        private string currentMessage = string.Empty;
+        private Vector3[] toolSlotPositions = Array.Empty<Vector3>();
+        private int[] lastToolOrder = Array.Empty<int>();
 
         public int CurrentStepIndex { get; private set; }
-        public int MistakeCount { get; private set; }
         public bool IsComplete { get; private set; }
-        public ScoreResult FinalScore { get; private set; }
+        public float ElapsedSeconds { get; private set; }
+        public int FinalScore { get; private set; }
 
         /// <summary>シーン生成時に表示と工程の参照を設定する。</summary>
         public void Configure(
@@ -90,16 +93,26 @@ namespace MRRobotRepair.Gameplay
             }
 
             if (!gameStarted || IsComplete) return;
+            ElapsedSeconds = Mathf.Max(0f, Time.unscaledTime - startTime);
+            int displayedSecond = Mathf.FloorToInt(ElapsedSeconds);
+            if (displayedSecond != lastDisplayedSecond)
+            {
+                lastDisplayedSecond = displayedSecond;
+                RefreshStatus();
+            }
+
             if (hintTimer.Tick(Time.unscaledDeltaTime))
             {
-                string hint = CurrentStepIndex < hints.Length ? hints[CurrentStepIndex] : "色の合う工具を使ってください";
-                SetStatus($"ヒント: {hint}");
-                statusClearTime = 0f;
+                string hint = CurrentStepIndex < hints.Length ? hints[CurrentStepIndex] : "色と形の合う工具を使ってください";
+                currentMessage = $"ヒント: {hint}";
+                messageClearTime = 0f;
+                RefreshStatus();
             }
-            else if (statusClearTime > 0f && Time.unscaledTime >= statusClearTime)
+            else if (messageClearTime > 0f && Time.unscaledTime >= messageClearTime)
             {
-                SetStatus($"ミス: {MistakeCount}");
-                statusClearTime = 0f;
+                currentMessage = string.Empty;
+                messageClearTime = 0f;
+                RefreshStatus();
             }
         }
 
@@ -109,13 +122,18 @@ namespace MRRobotRepair.Gameplay
             gameStarted = true;
             IsComplete = false;
             CurrentStepIndex = 0;
-            MistakeCount = 0;
-            FinalScore = default;
+            ElapsedSeconds = 0f;
+            FinalScore = 0;
             startTime = Time.unscaledTime;
+            lastDisplayedSecond = -1;
+            currentMessage = string.Empty;
+            messageClearTime = 0f;
             hintTimer.Reset();
             foreach (RepairTarget target in targets) target?.ResetTarget();
             foreach (RepairSelectStep step in selectableSteps) step?.ResetStep();
+            CaptureToolSlots();
             foreach (RepairTool tool in tools) tool?.ResetTool();
+            ShuffleToolPositions();
             ShowCurrentStep();
         }
 
@@ -124,7 +142,7 @@ namespace MRRobotRepair.Gameplay
         {
             if (!gameStarted || IsComplete || stepIndex != CurrentStepIndex)
             {
-                RecordMistake("今の手順と違います");
+                ShowTemporaryMessage("今の手順と違います");
                 return false;
             }
 
@@ -140,13 +158,13 @@ namespace MRRobotRepair.Gameplay
             return true;
         }
 
-        /// <summary>誤操作を記録し、短い案内を表示する。</summary>
-        public void RecordMistake(string message)
+        /// <summary>スコアへ影響しない短い操作案内を表示する。</summary>
+        public void ShowTemporaryMessage(string message)
         {
             if (!gameStarted || IsComplete) return;
-            MistakeCount++;
-            SetStatus($"{message}  (ミス: {MistakeCount})");
-            statusClearTime = Time.unscaledTime + 2f;
+            currentMessage = message;
+            messageClearTime = Time.unscaledTime + 2f;
+            RefreshStatus();
         }
 
         private void OnPlacementConfirmed(Vector3 position, Quaternion rotation)
@@ -165,17 +183,74 @@ namespace MRRobotRepair.Gameplay
         {
             if (CurrentStepIndex < instructions.Length)
                 SetInstruction($"手順 {CurrentStepIndex + 1}/{instructions.Length}\n{instructions[CurrentStepIndex]}");
-            SetStatus($"ミス: {MistakeCount}");
+            currentMessage = string.Empty;
+            RefreshStatus();
         }
 
         private void CompleteGame()
         {
             IsComplete = true;
-            float elapsed = Mathf.Max(0f, Time.unscaledTime - startTime);
-            float accuracy = instructions.Length / (float)Mathf.Max(1, instructions.Length + MistakeCount);
-            FinalScore = ScoreCalculator.Calculate(new ScoreInput(accuracy, elapsed, 180f, true));
-            SetInstruction($"修理完了!  スコア {FinalScore.TotalScore}/100\nBまたはYで、もう一度");
-            SetStatus($"時間 {elapsed:0}秒 / ミス {MistakeCount}");
+            ElapsedSeconds = Mathf.Max(0f, Time.unscaledTime - startTime);
+            FinalScore = CalculateTimeScore(ElapsedSeconds);
+            SetInstruction($"修理完了!  スコア {FinalScore}/100\nBまたはYで、もう一度");
+            SetStatus($"クリアタイム: {FormatTime(ElapsedSeconds)}");
+        }
+
+        /// <summary>クリア時間だけから100点満点のスコアを計算する。5秒ごとに1点減点する。</summary>
+        public static int CalculateTimeScore(float elapsedSeconds) =>
+            Mathf.Clamp(100 - Mathf.FloorToInt(Mathf.Max(0f, elapsedSeconds) / 5f), 0, 100);
+
+        private void RefreshStatus()
+        {
+            string timer = $"タイム: {FormatTime(ElapsedSeconds)}";
+            SetStatus(string.IsNullOrEmpty(currentMessage) ? timer : $"{timer}\n{currentMessage}");
+        }
+
+        private static string FormatTime(float seconds)
+        {
+            int totalSeconds = Mathf.Max(0, Mathf.FloorToInt(seconds));
+            return $"{totalSeconds / 60:00}:{totalSeconds % 60:00}";
+        }
+
+        private void CaptureToolSlots()
+        {
+            if (toolSlotPositions.Length == tools.Length) return;
+            toolSlotPositions = new Vector3[tools.Length];
+            lastToolOrder = new int[tools.Length];
+            for (int index = 0; index < tools.Length; index++)
+            {
+                if (tools[index] != null)
+                {
+                    toolSlotPositions[index] = tools[index].transform.localPosition;
+                }
+                lastToolOrder[index] = index;
+            }
+        }
+
+        private void ShuffleToolPositions()
+        {
+            if (tools.Length < 2) return;
+            int[] order = new int[tools.Length];
+            for (int index = 0; index < order.Length; index++) order[index] = index;
+            for (int index = order.Length - 1; index > 0; index--)
+            {
+                int swapIndex = UnityEngine.Random.Range(0, index + 1);
+                (order[index], order[swapIndex]) = (order[swapIndex], order[index]);
+            }
+
+            bool sameAsLast = true;
+            for (int index = 0; index < order.Length; index++)
+                sameAsLast &= order[index] == lastToolOrder[index];
+            if (sameAsLast) (order[0], order[1]) = (order[1], order[0]);
+
+            for (int index = 0; index < tools.Length; index++)
+            {
+                RepairTool tool = tools[index];
+                if (tool == null) continue;
+                int slot = order[index];
+                tool.transform.localPosition = toolSlotPositions[slot];
+            }
+            lastToolOrder = order;
         }
 
         private void SetInstruction(string value)
