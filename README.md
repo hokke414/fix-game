@@ -20,10 +20,12 @@ XRパッケージはUnity 6対応版へ固定しています。Android Build Sup
 
 1. ゲーム状態・修理工程・リセット基盤：実装済み
 2. スコア、誤操作重複抑制、30秒ヒント判定：実装済み
-3. OpenXR / XRI / Meta XR SDKとQuest向け設定：復旧中
+3. OpenXR / XRI / Meta XR SDKとQuest向け設定：復旧済み
 4. 作業台配置コア：実装済み
-5. 作業台配置シーン接続：実装済み、再検証中
-6. 断線、ヒューズ、基板の各工程：未実装
+5. 作業台配置シーン接続：実装・再検証済み
+6. 断線、ヒューズ、基板の各工程：最小プレイ版を実装済み
+
+配置確定後は、プリミティブで作ったロボットと6個の工具が表示されます。電源OFF、断線診断・交換、ヒューズ診断・交換、基板開放・交換、最終テストの8手順を順番に進め、完了時にスコアを表示します。高品質な3Dモデルや演出は今後差し替える前提です。
 
 ## 作業台配置
 
@@ -33,7 +35,11 @@ XRパッケージはUnity 6対応版へ固定しています。Android Build Sup
 
 ## テスト
 
-Unity Test RunnerでEditModeとPlayModeを実行します。Quest実機でのパススルー、入力、72 FPSは未検証です。
+Unity Test RunnerでEditModeとPlayModeを実行します。復旧時点でEditModeは72件すべて成功、PlayModeは928件成功・3件スキップ・失敗0件です。
+
+最新のAndroid Development APKはUnityビルドに成功し、Quest 3へのADBインストール・OpenXR起動・プロセス継続・致命的例外なしまで確認済みです。ヘッドセット内での見え方、全8工程の手動完走、72 FPSは実機装着での確認が必要です。
+
+実機確認用ファイルは`output/quest/MRRobotRepair-Quest3-Development.apk`です。開発用署名のため、SideQuestまたはADBでサイドロードしてください。
 
 ## 暫定スコア設定
 

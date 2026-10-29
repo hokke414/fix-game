@@ -1,7 +1,10 @@
 {
   "name": "MRRobotRepair.Runtime",
   "rootNamespace": "MRRobotRepair",
-  "references": ["Unity.InputSystem"],
+  "references": [
+    "Unity.InputSystem",
+    "Unity.XR.Interaction.Toolkit"
+  ],
   "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
